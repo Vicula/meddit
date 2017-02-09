@@ -1,7 +1,9 @@
-#Simple Setup
+#Meddit
 Welcome.
-
-Usage
+---
+##Background
+This app is going to compile multiple medical journals and databases and tooling on one central application.
+###Usage
 ---
 
 Start the development server with this command:
@@ -9,7 +11,7 @@ Start the development server with this command:
 ```
 npm start
 ```
- 
+
 
 Setup
 ---
