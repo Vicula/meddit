@@ -11,10 +11,10 @@ import Layout from './pages/layout.js'
 const app = document.getElementById('mount');
 
 const reducer = function(state, action){
-  
+
 }
 
-const store = createStore()
+const store = createStore(reducer, 0);
 
 
 axios.get('http://api.springer.com/metadata/json?q=all&p=50&api_key=819bcf4789a2d514adc8b2aa256dfbf2')

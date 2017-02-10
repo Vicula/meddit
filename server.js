@@ -23,6 +23,7 @@ app.set('view engine', 'html');
 // ------------------------------
 // js, css, and imafiles from dist/assets/
 app.use( express.static( __dirname + '/public') );
+// app.use(express.favicon("public/images/favicon.ico")); 
 
 //handle GET requests to `/` (root)
 app.get('/', function (req, res) {
