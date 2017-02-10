@@ -1,5 +1,6 @@
 @import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "nav.scss";
+@import "home.scss";
 
 
 $color-1: #595241;
@@ -14,6 +15,8 @@ $color-5: #8A0917;
 }
 
 body{
+  // padding-top: 5vh;
+  margin-top: 100px;
   margin: 0;
   padding: 0;
   background: $color-2;

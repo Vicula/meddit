@@ -4,6 +4,7 @@ $color-3: #FFFFFF;
 $color-4: #ACCFCC;
 $color-5: #8A0917;
 
+
 .nav{
   background: $color-4;
   position: fixed;
@@ -14,11 +15,56 @@ $color-5: #8A0917;
   // max-height: 3vh;
   border-bottom: 0.5vh solid $color-1;
   padding-left: 0.5vw;
+  // font-size: 0;
   *{
     display: inline-block;
+  }
+  img{
+    width: 12%;
+    vertical-align:baseline;
+    margin-right: 3%;
   }
   span{
     font-size: 3vw;
     color: darkblue;
   }
+
+  .searchBar{
+    float: right;
+    // margin: 2vw;
+    margin-top: 1vw;
+    margin-right: 1vw;
+
+    input{
+      // height: 100vh;
+      padding: 10px 15px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    .butn{
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border: none;
+      vertical-align: top;
+      // height: ;
+    }
+  }
+
+}
+
+.layoutHolder{
+  margin-top: 100px;
+  background: $color-3;
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  min-height: 2500px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.footer{
+  width: 100%;
+  background: $color-1;
+  height: 200px;
 }
