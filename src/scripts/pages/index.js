@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import actionCreators from '../actions/action-creators.js';
+import * as actionCreators from '../actions/action-creators.js';
 
 import Layout from './layout.js'
 
@@ -11,6 +11,7 @@ function mapStateToProps(state){
       users: state.users
    }
 }
+console.log(actionCreators)
 
 function mapDispatchToProps(dispatch){
 

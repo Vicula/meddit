@@ -20,10 +20,14 @@ const reducers = combineReducers({
   books,
   users
 })
+const initialState ={
+  books: {},
+  users: {}
+}
 
 const middleware = applyMiddleware(logger(), thunk, promise())
 
-const store = createStore(reducers, middleware);
+const store = createStore(reducers,initialState, middleware,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={store}>
