@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
-import { createStore } from 'redux';
+import { applyMiddleware ,createStore } from 'redux';
 import axios from 'axios';
 const parseString = require('xml2js').parseString;
 
@@ -13,6 +13,12 @@ const app = document.getElementById('mount');
 const reducer = function(state, action){
 
 }
+const logger = (state) => (next) => (action) =>{
+  console.log("prev state:" state)
+  console.log("next action:" next)
+  console.log('action type:' action)
+}
+const middleware = applyMiddleware(logger)
 
 const store = createStore(reducer, 0);
 
