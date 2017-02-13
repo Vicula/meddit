@@ -1,14 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux'
 
 
-
-// @connect((store) => {
-//   return {
-//     users: "hey",
-//     books: 'yo'
-//   }
-// })
 // <span className="fa fa-stethoscope" aria-hidden="true"></span>
 export default class Layout extends React.Component{
   render(){
@@ -28,7 +20,7 @@ export default class Layout extends React.Component{
           </div>
         </nav>
         <div className="layoutHolder">
-          {this.props.children}
+          {React.cloneElement(this.props.children, this.props)}
         </div>
         <footer className="footer">
 
