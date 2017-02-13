@@ -3,18 +3,19 @@ import ReactDOM from 'react-dom';
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
-import { applyMiddleware ,createStore } from 'redux';
-import axios from 'axios';
-const parseString = require('xml2js').parseString;
+import { applyMiddleware ,createStore ,combineReducers } from 'redux';
+// const parseString = require('xml2js').parseString;
+
+import books from './reducers/bookFetch.js'
 
 import Home from './pages/home.js'
 import Layout from './pages/layout.js'
 
 const app = document.getElementById('mount');
 
-const reducer = function(state, action){
+const reducers = combineReducers({
 
-}
+})
 // const logger = (state) => (next) => (action) =>{
 //   console.log("prev state:", state)
 //   console.log("next action:" ,next)
@@ -23,16 +24,6 @@ const reducer = function(state, action){
 const middleware = applyMiddleware(logger(), thunk)
 
 const store = createStore(reducer, middleware);
-
-
-axios.get('http://api.springer.com/metadata/json?q=all&p=50&api_key=819bcf4789a2d514adc8b2aa256dfbf2')
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.log(error);
-});
-
 
 
 ReactDOM.render(

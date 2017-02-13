@@ -1,6 +1,9 @@
 
-export default bookReducer = (state, action) => {
+
+export default function books = (state, action) => {
   switch (action.type){
-    case "FETCH_SPRINGER"
+    case "FETCH_SPRINGER":{
+
+    }
   }
 }
