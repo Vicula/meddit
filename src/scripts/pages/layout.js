@@ -1,4 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux'
+
+
+
+// @connect((store) => {
+//   return {
+//     users: "hey",
+//     books: 'yo'
+//   }
+// })
 // <span className="fa fa-stethoscope" aria-hidden="true"></span>
 export default class Layout extends React.Component{
   render(){

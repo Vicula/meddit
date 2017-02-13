@@ -15,6 +15,10 @@ var config = {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: ['babel'],
+        query: {
+          presets: ['react', 'es2015'],
+          plugins: ['transform-decorators-legacy']
+        }
       },
     ],
   },

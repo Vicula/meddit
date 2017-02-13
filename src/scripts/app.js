@@ -5,6 +5,7 @@ import thunk from 'redux-thunk'
 import promise from 'redux-promise-middleware'
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import { applyMiddleware ,createStore ,combineReducers } from 'redux';
+import { Provider } from 'react-redux'
 // const parseString = require('xml2js').parseString;
 
 import books from './reducers/bookFetch.js'
@@ -29,13 +30,15 @@ const middleware = applyMiddleware(logger(), thunk, promise())
 
 const store = createStore(reducers, middleware);
 
-store.subscribe()
+// store.subscribe()
 
 
 ReactDOM.render(
-  <Router history={hashHistory}>
-    <Route path="/" component={Layout}>
-      <IndexRoute component={Home}></IndexRoute>
-    </Route>
-  </Router>,
+  <Provider store={store}>
+    <Router history={hashHistory}>
+      <Route path="/" component={Layout}>
+        <IndexRoute component={Home}></IndexRoute>
+      </Route>
+    </Router>
+  </Provider>,
 app)
