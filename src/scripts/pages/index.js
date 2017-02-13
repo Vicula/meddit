@@ -11,7 +11,6 @@ function mapStateToProps(state){
       users: state.users
    }
 }
-console.log(actionCreators)
 
 function mapDispatchToProps(dispatch){
 
