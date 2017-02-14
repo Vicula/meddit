@@ -1,5 +1,5 @@
 
-export default function books (state={}, action) {
+export default function books (state={ crnt50:[]}, action) {
 
   switch (action.type){
     case "FETCH_SPRINGER":{

@@ -21,7 +21,7 @@ const reducers = combineReducers({
   users
 })
 const initialState ={
-  books: {},
+  books: {crnt50:[]},
   users: {}
 }
 
