@@ -24,6 +24,7 @@ body{
 
 .springPage{
   font-size: 0;
+  padding-bottom: 1vh;
   .journal-box:hover{
     // border: 3px solid $color-5;
   }
@@ -32,5 +33,11 @@ body{
   }
   p{
     font-size: 1vw;
+  }
+
+  .moreBtn{
+    display: block;
+    margin: 2vh auto;
+
   }
 }

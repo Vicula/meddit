@@ -22,10 +22,7 @@ export default class Springer extends React.Component{
   render(){
     return (
       <div className="springPage">
-      {myData.map((crnt) =>{
-        console.log(crnt.stylesheets)
-        return crnt
-      })}
+        {myData.map((crnt) =>{return crnt})}
       </div>
     )
   }

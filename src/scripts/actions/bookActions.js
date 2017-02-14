@@ -19,6 +19,10 @@ export function bookFetchCycle(bookAry){
     )
   }
 
+  journals.push(
+    <button className="btn btn-lg btn-default moreBtn">Load More..</button>
+  )
+
   return journals
 }
 
