@@ -1,6 +1,13 @@
+import React from 'react'
 
-export default function books (state={ crnt50:[]}, action) {
+let initialState = {
+  crnt50: 1,
+  crntBooks: []
+}
 
+export default function books (state=initialState, action) {
+  let newState = {}
+  Object.assign(newState, state)
   switch (action.type){
     case "FETCH_SPRINGER":{
       console.log('hey')
@@ -8,8 +15,8 @@ export default function books (state={ crnt50:[]}, action) {
     }
     case "FETCH_SPRINGER_FULFILLED" :{
       let data = action.payload.request.response
-      console.log(JSON.parse(data))
+      newState.crntBooks = JSON.parse(data).records
     }
   }
-  return state
+  return newState
 }

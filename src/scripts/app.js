@@ -13,6 +13,7 @@ import users from './reducers/userRed.js'
 
 import Meddit from './pages/index.js'
 import Home from './pages/home.js'
+import Springer from './pages/spring.js'
 
 const app = document.getElementById('mount');
 
@@ -21,7 +22,7 @@ const reducers = combineReducers({
   users
 })
 const initialState ={
-  books: {crnt50:[]},
+  books: {crnt50:1, crntBooks: []},
   users: {}
 }
 
@@ -34,6 +35,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
       <Route path="/" component={Meddit}>
         <IndexRoute component={Home}></IndexRoute>
+        <Route path='/spring' component={Springer}></Route>
       </Route>
     </Router>
   </Provider>,

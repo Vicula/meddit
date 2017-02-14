@@ -1,3 +1,21 @@
+import JournalBox from '../components/journalBox.js'
+
+
+export function bookFetchCycle(bookAry){
+  let journals = []
+  for(i=0;i<bookAry.length;i++){
+    let crntJournal = bookAry[i]
+    
+  }
+
+  return journals.join(',')
+}
+
+
+
+
+
+
 
 
 

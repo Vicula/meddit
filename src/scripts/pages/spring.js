@@ -1,11 +1,16 @@
 import React from 'react';
 
-export default class Home extends React.Component{
+export default class Springer extends React.Component{
+
+  componentWillMount(){
+
+  }
 
   render(){
+
     return (
       <div className="springPage">
-        
+        <h1>IT WORKED</h1>
       </div>
     )
   }

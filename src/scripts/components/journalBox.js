@@ -1,4 +1,11 @@
 import React from 'react';
 
+export default class JournalBox extends React.Component{
 
-export default class JournalBox 
+  render(){
+
+    return (
+      <div></div>
+    )
+  }
+}
