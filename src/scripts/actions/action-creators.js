@@ -30,3 +30,10 @@ export function changeName (name){
     }
   }
 }
+
+export function fetchBookInfo (isbn){
+  return {
+    type: 'FETCH_BOOK_INFO',
+    payload: 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn
+  }
+}

@@ -21,3 +21,16 @@ body{
   padding: 0;
   background: $color-2;
 }
+
+.springPage{
+  font-size: 0;
+  .journal-box:hover{
+    // border: 3px solid $color-5;
+  }
+  h4{
+    color: gray;
+  }
+  p{
+    font-size: 1vw;
+  }
+}

@@ -1,14 +1,25 @@
 import JournalBox from '../components/journalBox.js'
+import React from 'react';
 
 
 export function bookFetchCycle(bookAry){
   let journals = []
-  for(i=0;i<bookAry.length;i++){
+  for(var i=0;i<bookAry.length;i++){
     let crntJournal = bookAry[i]
-    
+
+    journals.push(
+      <JournalBox
+      key={i}
+      data={bookAry[i]}
+      title={bookAry[i].title}
+      creator={bookAry[i].creators[0].creator}
+      abstract={bookAry[i].abstract}
+      ></JournalBox>
+
+    )
   }
 
-  return journals.join(',')
+  return journals
 }
 
 
