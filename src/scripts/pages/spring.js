@@ -8,11 +8,7 @@ export default class Springer extends React.Component{
 
   componentWillMount(){
     if(this.props.books.crntBooks.length === 0){
-      this.props.fetchSpringer(1).then(() =>{
-        let data = bookFetchCycle(this.props.books.crntBooks)
-        myData = data
-        this.forceUpdate()
-      })
+      window.location.hash = '/'
     } else {
       let data = bookFetchCycle(this.props.books.crntBooks)
       myData = data
