@@ -2,18 +2,28 @@ import JournalBox from '../components/journalBox.js'
 import React from 'react';
 import axios from 'axios';
 
-export function moreBookInfo(isbn){
-  let strng ='https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn
-  return axios.get(strng)
-}
+// export function moreBookInfo(isbn){
+//   let strng ='https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn
+//   return axios.get(strng)
+// }
 
 
-export function bookFetchCycle(bookAry){
+export function bookFetchCycle(bookAry, func){
   let journals = []
   for(var i=0;i<bookAry.length;i++){
     let crntJournal = bookAry[i]
+    let isbn = bookAry[i].electronicIsbn.split('-')
+    isbn = isbn.join('')
+    if(isbn === ''){
 
-    moreBookInfo(bookAry[i].electronicIsbn)
+    } else {
+      func(isbn).then((res)=>{
+        console.log('look here---->>>', res)
+        var data = res
+      })
+    }
+
+
 
     journals.push(
       <JournalBox

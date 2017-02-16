@@ -32,8 +32,17 @@ export function changeName (name){
 }
 
 export function fetchBookInfo (isbn){
+  let myStrng = 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn + '&key=AIzaSyBOySHN_DumrOR-jPqwbXRxeC3IcWubi0M'
   return {
     type: 'FETCH_BOOK_INFO',
-    payload: 'https://www.googleapis.com/books/v1/volumes?q=isbn:' + isbn
+    payload: axios.get(myStrng)
+  }
+}
+
+export function searchKeywordSpringer(keyword){
+  let daDing = 'http://api.springer.com/metadata/json?q=keyword:' + keyword + '&api_key=819bcf4789a2d514adc8b2aa256dfbf2'
+  return {
+    type: 'KEYWORD_SPRING_SEARCH',
+    payload: axios.get(daDing)
   }
 }

@@ -10,16 +10,19 @@ export default class Springer extends React.Component{
     if(this.props.books.crntBooks.length === 0){
       window.location.hash = '/'
     } else {
-      let data = bookFetchCycle(this.props.books.crntBooks)
+      let data = bookFetchCycle(this.props.books.crntBooks, this.props.fetchBookInfo)
       myData = data
     }
   }
 
-  render(){
+  componentDidMount(){
     let daInput = document.querySelector('.searchBar input')
     daInput.addEventListener('keydown', ()=>{
-      
+      console.log(daInput.value)
     })
+  }
+
+  render(){
     return (
       <div className="springPage">
         {myData.map((crnt) =>{return crnt})}
