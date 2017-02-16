@@ -16,6 +16,10 @@ export default class Springer extends React.Component{
   }
 
   render(){
+    let daInput = document.querySelector('.searchBar input')
+    daInput.addEventListener('keydown', ()=>{
+      
+    })
     return (
       <div className="springPage">
         {myData.map((crnt) =>{return crnt})}
